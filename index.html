@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vignesh R - Professional Portfolio | LinkedIn Style</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Professional portfolio of Vignesh R, MBA Candidate in HR & Finance. Explore projects, read articles, and connect for opportunities.">
+  <meta name="author" content="Vignesh R">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header">
+    <div class="container header__content">
+      <div class="header__left">
+        <a href="#" class="header__logo" title="Vignesh R Portfolio">VR</a>
+        <div class="header__search-container">
+          <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
+          <input type="text" id="search-input" class="header__search" placeholder="Search projects, blogs, skills...">
+        </div>
+      </div>
+      
+      <nav class="header__nav">
+        <div class="header__link active" id="nav-feed" data-tab="all">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </div>
+        <div class="header__link" id="nav-network">
+          <i class="fa-solid fa-user-group"></i>
+          <span>My Network</span>
+        </div>
+        <div class="header__link" id="nav-projects" data-tab="project">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Projects</span>
+        </div>
+        <div class="header__link" id="nav-blogs" data-tab="blog">
+          <i class="fa-solid fa-message"></i>
+          <span>Blogs</span>
+        </div>
+        <div class="header__link" id="nav-contact">
+          <i class="fa-solid fa-address-book"></i>
+          <span>Contact</span>
+        </div>
+        <div class="header__theme-toggle" id="theme-toggle" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-moon"></i>
+        </div>
+        <div class="header__link" style="border-left: 1px solid var(--border-color); padding-left: 12px; min-width: auto;">
+          <img src="assets/vignesh_real.jpg" alt="Vignesh R" class="header__avatar">
+          <span>Me <i class="fa-solid fa-caret-down" style="font-size: 0.6rem; margin-left: 2px;"></i></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container Layout -->
+  <main class="container">
+    <div class="layout">
+      
+      <!-- Left Sidebar: Profile Details -->
+      <aside class="layout__sidebar-left">
+        <div class="card profile-card">
+          <div class="profile-card__banner" style="background-image: url('assets/vignesh_banner.png');"></div>
+          <a href="#" class="profile-card__avatar-link">
+            <img src="assets/vignesh_real.jpg" alt="Vignesh R" class="profile-card__avatar">
+          </a>
+          <div class="profile-card__info">
+            <h1 class="profile-card__name">Vignesh R</h1>
+            <p class="profile-card__headline">MBA Candidate at St. Joseph's College of Engineering | Specializing in HR & Finance</p>
+            <p class="profile-card__college">Chennai, Tamil Nadu, India</p>
+          </div>
+          <div class="profile-card__stats">
+            <div class="profile-card__stat-item">
+              <span>Connections</span>
+              <span class="profile-card__stat-num" id="connection-count">482</span>
+            </div>
+            <div class="profile-card__stat-item">
+              <span>Profile views</span>
+              <span class="profile-card__stat-num">127</span>
+            </div>
+          </div>
+          <div class="profile-card__footer">
+            <div class="profile-card__my-items">
+              <i class="fa-solid fa-bookmark"></i>
+              <span>My items</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card recent-card">
+          <h3 class="recent-card__title">Recent</h3>
+          <ul class="recent-card__list">
+            <li class="recent-card__item"><i class="fa-solid fa-hashtag"></i> <span>HRAnalytics</span></li>
+            <li class="recent-card__item"><i class="fa-solid fa-hashtag"></i> <span>TalentAcquisition</span></li>
+            <li class="recent-card__item"><i class="fa-solid fa-hashtag"></i> <span>CapitalMarkets</span></li>
+            <li class="recent-card__item"><i class="fa-solid fa-hashtag"></i> <span>DataAnalytics</span></li>
+            <li class="recent-card__item"><i class="fa-solid fa-hashtag"></i> <span>FinancialAnalysis</span></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Middle: Dynamic News/Project/Blog Feed -->
+      <section class="layout__feed">
+        <!-- Post Composer -->
+        <div class="card feed-composer">
+          <div class="feed-composer__input-row">
+            <img src="assets/vignesh_real.jpg" alt="Vignesh R" class="feed-composer__avatar">
+            <button class="feed-composer__button-trigger" id="composer-trigger">Start a post, share a project or blog...</button>
+          </div>
+          <div class="feed-composer__actions">
+            <div class="feed-composer__action-btn photo" id="composer-photo">
+              <i class="fa-solid fa-image"></i>
+              <span>Photo</span>
+            </div>
+            <div class="feed-composer__action-btn video" id="composer-video">
+              <i class="fa-solid fa-video"></i>
+              <span>Video</span>
+            </div>
+            <div class="feed-composer__action-btn event" id="composer-event">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Event</span>
+            </div>
+            <div class="feed-composer__action-btn article" id="composer-article">
+              <i class="fa-solid fa-newspaper"></i>
+              <span>Write article</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="feed-filter">
+          <span class="feed-filter__label">Filter feed:</span>
+          <button class="feed-filter__pill active" id="filter-all" data-filter="all">All</button>
+          <button class="feed-filter__pill" id="filter-projects" data-filter="project">Projects</button>
+          <button class="feed-filter__pill" id="filter-blogs" data-filter="blog">Blogs</button>
+          <button class="feed-filter__pill" id="filter-news" data-filter="news">News</button>
+        </div>
+
+        <!-- Feed Container -->
+        <div id="feed-container">
+          <!-- Dynamic items will be injected by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Right Sidebar: LinkedIn News & Quick Contacts -->
+      <aside class="layout__sidebar-right">
+        <!-- LinkedIn News -->
+        <div class="card news-card">
+          <div class="news-card__header">
+            <h2 class="news-card__title">LinkedIn News</h2>
+            <i class="fa-solid fa-circle-info" style="color: var(--text-muted); cursor: pointer;" title="Trending professional news"></i>
+          </div>
+          <div class="news-card__list">
+            <div class="news-card__item" onclick="window.app.loadNewsDetail('hr-trends')">
+              <h4 class="news-card__item-title">HR Trends: AI in Recruitment</h4>
+              <p class="news-card__item-meta">1d ago • 1,234 readers</p>
+            </div>
+            <div class="news-card__item" onclick="window.app.loadNewsDetail('capital-market')">
+              <h4 class="news-card__item-title">Capital Markets Volatility Analysis</h4>
+              <p class="news-card__item-meta">2d ago • 856 readers</p>
+            </div>
+            <div class="news-card__item" onclick="window.app.loadNewsDetail('employability-gap')">
+              <h4 class="news-card__item-title">Job Seekers Skill Gap Study</h4>
+              <p class="news-card__item-meta">3d ago • 2,410 readers</p>
+            </div>
+            <div class="news-card__item" onclick="window.app.loadNewsDetail('people-ops')">
+              <h4 class="news-card__item-title">People Operations vs. Traditional HR</h4>
+              <p class="news-card__item-meta">4d ago • 712 readers</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="card contact-card">
+          <h2 class="contact-card__title">Direct Contact</h2>
+          <div class="contact-card__list">
+            <div class="contact-card__item">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="contact-card__item-value">vvvigneshvikki1411@gmail.com</span>
+            </div>
+            <div class="contact-card__item">
+              <i class="fa-solid fa-phone"></i>
+              <span class="contact-card__item-value">+91 7358461411</span>
+            </div>
+            <div class="contact-card__item">
+              <i class="fa-brands fa-linkedin"></i>
+              <span class="contact-card__item-value"><a href="https://linkedin.com/in/vignesh-r26" target="_blank" class="text-blue">linkedin.com/in/vignesh-r26</a></span>
+            </div>
+          </div>
+          <button class="contact-card__btn" id="btn-download-resume">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </button>
+        </div>
+
+        <!-- People You May Know -->
+        <div class="card recommend-card">
+          <h2 class="recommend-card__title">People you may know</h2>
+          <div class="recommend-card__list">
+            <div class="recommend-item" id="rec-1">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop" alt="Priya Sharma" class="recommend-item__avatar">
+              <div class="recommend-item__info">
+                <h4 class="recommend-item__name">Priya Sharma</h4>
+                <p class="recommend-item__headline">HR Manager at TechCorp</p>
+              </div>
+              <button class="recommend-item__btn" onclick="window.app.connectUser('rec-1')">Connect</button>
+            </div>
+            <div class="recommend-item" id="rec-2">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" alt="Arjun Mehta" class="recommend-item__avatar">
+              <div class="recommend-item__info">
+                <h4 class="recommend-item__name">Arjun Mehta</h4>
+                <p class="recommend-item__headline">Financial Analyst at FinGrowth</p>
+              </div>
+              <button class="recommend-item__btn" onclick="window.app.connectUser('rec-2')">Connect</button>
+            </div>
+            <div class="recommend-item" id="rec-3">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop" alt="Sneha Iyer" class="recommend-item__avatar">
+              <div class="recommend-item__info">
+                <h4 class="recommend-item__name">Sneha Iyer</h4>
+                <p class="recommend-item__headline">Talent Acquisition Lead</p>
+              </div>
+              <button class="recommend-item__btn" onclick="window.app.connectUser('rec-3')">Connect</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- MODALS -->
+
+  <!-- 1. Create Post Modal -->
+  <div class="modal" id="post-modal">
+    <div class="modal__container">
+      <div class="modal__header">
+        <h3 class="modal__title" id="post-modal-title">Create a Post</h3>
+        <span class="modal__close" id="post-modal-close">&times;</span>
+      </div>
+      <div class="modal__body">
+        <div class="post-form__user">
+          <img src="assets/vignesh_real.jpg" alt="Vignesh R" class="post-form__avatar">
+          <div class="post-form__meta">
+            <span class="post-form__name">Vignesh R</span>
+            <select class="post-form__select" id="post-category">
+              <option value="news">Post (General / News)</option>
+              <option value="project">Project Share</option>
+              <option value="blog">Article / Blog Post</option>
+            </select>
+          </div>
+        </div>
+        <textarea class="post-form__textarea" id="post-text" placeholder="What do you want to talk about? Share your HR/Finance insight..."></textarea>
+        <input type="text" class="post-form__tag-input" id="post-tags" placeholder="Add hashtags (e.g. #HR, #Finance) separated by commas">
+      </div>
+      <div class="modal__footer">
+        <button class="modal__btn modal__btn--cancel" id="post-modal-cancel">Cancel</button>
+        <button class="modal__btn modal__btn--submit" id="post-submit-btn" disabled>Post</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Detailed Article View Modal -->
+  <div class="modal" id="article-modal">
+    <div class="modal__container" style="max-width: 650px;">
+      <div class="modal__header">
+        <h3 class="modal__title" id="article-type">Article View</h3>
+        <span class="modal__close" id="article-modal-close">&times;</span>
+      </div>
+      <div class="modal__body">
+        <h2 class="article-view__title" id="view-title">Article Title</h2>
+        <div class="article-view__author">
+          <img src="assets/vignesh_real.jpg" alt="Vignesh R" class="article-view__avatar">
+          <div class="article-view__meta">
+            <span class="article-view__name">Vignesh R</span>
+            <span class="article-view__headline" id="view-headline">MBA Candidate | HR & Finance Specialization</span>
+          </div>
+        </div>
+        <div class="article-view__body" id="view-body">
+          Article contents...
+        </div>
+        <div class="article-view__tags" id="view-tags">
+          <!-- Tags will be dynamically injected -->
+        </div>
+      </div>
+      <div class="modal__footer">
+        <button class="modal__btn modal__btn--submit" id="article-modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Contact Details Modal -->
+  <div class="modal" id="contact-modal">
+    <div class="modal__container">
+      <div class="modal__header">
+        <h3 class="modal__title">Vignesh R's Contact Info</h3>
+        <span class="modal__close" id="contact-modal-close">&times;</span>
+      </div>
+      <div class="modal__body">
+        <div class="contact-detail-row">
+          <i class="fa-solid fa-user-graduate"></i>
+          <div>
+            <div class="contact-detail-row__label">Professional Bio</div>
+            <div class="contact-detail-row__value text-bold">MBA candidate specializing in HR & Finance with background in talent management, recruitment, data analysis, and financial reporting.</div>
+          </div>
+        </div>
+        <div class="contact-detail-row">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <div class="contact-detail-row__label">Email</div>
+            <div class="contact-detail-row__value"><a href="mailto:vvvigneshvikki1411@gmail.com" class="text-blue">vvvigneshvikki1411@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-detail-row">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <div class="contact-detail-row__label">Phone</div>
+            <div class="contact-detail-row__value">+91 7358461411</div>
+          </div>
+        </div>
+        <div class="contact-detail-row">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <div class="contact-detail-row__label">LinkedIn Profile</div>
+            <div class="contact-detail-row__value"><a href="https://linkedin.com/in/vignesh-r26" target="_blank" class="text-blue">linkedin.com/in/vignesh-r26</a></div>
+          </div>
+        </div>
+        <div class="contact-detail-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <div class="contact-detail-row__label">Location</div>
+            <div class="contact-detail-row__value">Chennai, Tamil Nadu, India</div>
+          </div>
+        </div>
+        <div class="contact-detail-row">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div>
+            <div class="contact-detail-row__label">Education</div>
+            <div class="contact-detail-row__value">
+              <strong>St. Joseph's College of Engineering</strong> (2024 - 2026)<br>
+              MBA in HR & Finance (CGPA: 8.4)<br><br>
+              <strong>Government Arts and Science College, Nandanam</strong> (2021 - 2024)<br>
+              BBA (CGPA: 6.3)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <button class="modal__btn modal__btn--submit" id="contact-modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- jsPDF Library for PDF resume generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
